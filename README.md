@@ -2,8 +2,8 @@
 Projeto Integrador I - Transporte Público e Segurança de dados
 
 ## Projeto
-A primeira parte do projeto consiste na criação de um sistema de ouvidoria em que os usuários possam enviar reclamações e/ou sugestões de melhorias para a prefeitura em relação ao transporte público local.
-Para isto, utilizaremos **HTML/CSS e JavaScript** para desenvolver o Front-End e o FrameWork **Django** com o SGBD **PostgreSQL** para o Back-End.
+A primeira parte do projeto consiste na criação de um sistema de ouvidoria em que os usuários possam enviar reclamações e/ou sugestões de melhorias para a prefeitura em relação ao transporte público local.  
+Para isto, utilizaremos **HTML/CSS e JavaScript** para desenvolver o Front-End e o FrameWork **Django** com o SGBD **PostgreSQL** para o Back-End.  
 Enquanto que a segunda parte consiste em desenvolver um sistema seguro para o armazenamento dos dados no website Monitora-JP.
 
 ## Desenvolvido por:
@@ -14,17 +14,17 @@ Enquanto que a segunda parte consiste em desenvolver um sistema seguro para o ar
 
 # Tutorial - Instalação
 ## Python
-Para rodar o programa, é necessário a instalação do **Python** e algumas dependências.
-Neste projeto, a versão utilizada é a ***3.11.6***
+Para rodar o programa, é necessário a instalação do **Python** e algumas dependências.  
+Neste projeto, a versão utilizada é a ***3.11.6***  
 Baixe aqui: https://www.python.org/downloads/release/python-3116/
 
 ## PostgreSQL
-O banco de dados utilizado no projeto é o **PostgreSQL**. A versão utilizada é a ***16.1***
-Para administrá-lo, precisamos do **pgadmin**.
+O banco de dados utilizado no projeto é o **PostgreSQL**. A versão utilizada é a ***16.1***  
+Para administrá-lo, precisamos do **pgadmin**.  
 Baixe aqui: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
 ## PowerShell
-Por padrão, o PowerShell não permite a execução de scripts via linha de comando. Para permitir, é necessário alterar as políticas de restrição.
+Por padrão, o PowerShell não permite a execução de scripts via linha de comando. Para permitir, é necessário alterar as políticas de restrição.  
 Abra o powershell como administrador e execute:
 ```powershell
 Set-ExecutionPolicy Unrestricted
@@ -51,8 +51,8 @@ python .\manage.py runserver
 ```
 
 ## VSCode
-A IDE ideal para o desenvolvimento do projeto é o Visual Studio Code.
-Algumas funcionalildades úteis é que ele pode ativar o ambiente virtual automaticamente e mostrar intellisense para o django.
+A IDE ideal para o desenvolvimento do projeto é o Visual Studio Code.  
+Algumas funcionalildades úteis é que ele pode ativar o ambiente virtual automaticamente e mostrar intellisense para o django.  
 Criem uma pasta chamada ".vscode" e crie um arquivo "settings.json". Nele cole isso:
 ```json
 {
@@ -67,9 +67,9 @@ Além disso, baixem a extensão Django. Ela pode bagunçar o autocomplete do VSc
  django-html | html 
 
 ## Materiais úteis
-https://docs.djangoproject.com/en/4.2/
-https://getbootstrap.com/docs/4.0/components/buttons/
-https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8
+https://docs.djangoproject.com/en/4.2/  
+https://getbootstrap.com/docs/4.0/components/buttons/  
+https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8  
 https://www.youtube.com/watch?v=sm1mokevMWk
 
 ## Git
