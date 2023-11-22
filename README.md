@@ -64,6 +64,8 @@ Além disso, baixem a extensão Django. Ela pode bagunçar o autocomplete do VSc
 - [ ] Abra as configurações do VSCode (Ctrl + ,)
 - [ ] Clique em Extensions e vá até **Emmet**
 - [ ] Em Emmet, ache **Include Languages** e adicione o item:
+| Item | Value |
+| --------| ------ |
 | django-html | html
 
 ## Materiais úteis
