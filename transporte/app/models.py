@@ -8,7 +8,7 @@ class User(models.Model):
     telefone_principal = models.CharField(max_length=11)
     telefone_opcional = models.CharField(max_length=11, blank=True)
     email = models.EmailField(max_length=100, unique=True)
-    senha = models.CharField(max_length=50)
+    senha = models.CharField(max_length=128)
     datansc = models.DateField()
     rua = models.CharField(max_length=100)
     numero = models.CharField(max_length=10)
@@ -21,7 +21,7 @@ class GovernAgency(models.Model):
     nome = models.CharField(max_length=200)
     telefone = models.CharField(max_length=11)
     email = models.EmailField(max_length=100, unique=True)
-    senha = models.CharField(max_length=50)
+    senha = models.CharField(max_length=128)
 
     def __str__(self):
         return self.nome
@@ -34,7 +34,7 @@ class Company(models.Model):
     cnpj = models.CharField(max_length=14, unique=True)
     telefone = models.CharField(max_length=11)
     email = models.EmailField(max_length=100, unique=True)
-    senha = models.CharField(max_length=50)
+    senha = models.CharField(max_length=128)
     rua = models.CharField(max_length=100)
     numero = models.CharField(max_length=10)
 
