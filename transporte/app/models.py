@@ -22,8 +22,8 @@ class GovernAgency(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     nome = models.CharField(max_length=200)
     telefone = models.CharField(max_length=11)
-    # email = models.EmailField(max_length=100, unique=True)
-    # senha = models.CharField(max_length=128)
+    email = models.EmailField(max_length=100, unique=True)
+    senha = models.CharField(max_length=128)
 
     def __str__(self):
         return self.nome
@@ -36,8 +36,8 @@ class Company(models.Model):
     nome = models.CharField(max_length=200)
     cnpj = models.CharField(max_length=14, unique=True)
     telefone = models.CharField(max_length=11)
-    # email = models.EmailField(max_length=100, unique=True)
-    # senha = models.CharField(max_length=128)
+    email = models.EmailField(max_length=100, unique=True)
+    senha = models.CharField(max_length=128)
     rua = models.CharField(max_length=100)
     numero = models.CharField(max_length=10)
 
@@ -53,6 +53,7 @@ class Feedback(models.Model):
     org = models.ForeignKey(GovernAgency, on_delete=models.CASCADE)
     observacao = models.TextField()
     data_reclamacao = models.DateTimeField(auto_now_add=True)
+    data_atualizacao = models.DateTimeField(auto_now=True)
     class Status(models.IntegerChoices):
         NEW = 0
         PENDING = 1
