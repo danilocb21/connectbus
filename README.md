@@ -27,7 +27,7 @@ Baixe aqui: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 Por padrão, o PowerShell não permite a execução de scripts via linha de comando. Para permitir, é necessário alterar as políticas de restrição.  
 Abra o powershell como administrador e execute:
 ```powershell
-Set-ExecutionPolicy Unrestricted
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
 
 ## Django
