@@ -14,7 +14,7 @@
 
     {% load static %}
     <link rel="stylesheet" href="{% static "app/style.css" %}">
-    <title>{% block title %}Monitora-JP | Trasnporte Público{% endblock %}</title>
+    <title>{% block title %}Monitora-JP | Transporte Público{% endblock %}</title>
 </head>
 <body>
     <header>
@@ -43,14 +43,16 @@
             </ul>
         </nav>
     </header>
-    <div id="content", name="content", class="main">
-        <div class="row justify-content-center">
-            <div class="col-8">
-                {% block content %}
-                {% endblock %}
+    <main> 
+        <div id="content", name="content", class="main">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
     {% comment %} Scripts Jquery / Bootstrap {% endcomment %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
