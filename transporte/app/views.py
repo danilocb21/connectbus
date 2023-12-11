@@ -17,3 +17,7 @@ def search(request):
         return render(request, "search.html", {"text": search, "company": company, "govern": govern})
     else:
         return HttpResponseRedirect("/")
+    
+
+def perfil(request, username):
+    return render(request, 'perfil.html')
