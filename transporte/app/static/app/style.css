@@ -2,6 +2,37 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+#background {
+  background: url(images/bg.jpg);
+  background-size: cover;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+#background .img-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#background::after {
+  content: '';
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  inset: 0;
+  display: block;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
   
 a {
   color: #fff;
@@ -26,12 +57,6 @@ nav {
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232e;
   height: 8vh;
-}
-
-main {
-  background: url("images/bg.jpg") no-repeat center;
-  background-size: cover;
-  height: 92vh;
 }
 
 .nav-list {
@@ -83,10 +108,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   border: none;
   cursor: pointer;
   color: grey;
+  animation: colorChangeReverse 0.5s forwards;
+}
+
+.search button:hover {
+  animation: colorChange 0.5s forwards;
 }
 
 .search input[type=search]:focus + button {
-  animation: colorChange 0.7s forwards;
+  animation: colorChange 0.5s forwards;
 }
 
 @keyframes colorChange {
@@ -95,6 +125,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   }
   to {
     color: #fff;
+  }
+}
+
+@keyframes colorChangeReverse {
+  from {
+    color: #fff;
+  }
+  to {
+    color: grey;
   }
 }
 
@@ -109,6 +148,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 @media (max-width: 999px) {
   body {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
   .nav-list {
     position: absolute;
@@ -157,4 +197,4 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
-}
+} 
