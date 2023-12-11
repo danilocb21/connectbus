@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} {{text}} - Buscar | Monitora JP{% endblock %}
+
+{% block content %}
+
+    {% if text %}
+        <h2>Resultados para {{text}}:</h2>
+        {% if company.count > 0 or govern.count > 0%}
+        <ul>
+            {% for result in company %}
+                <li><a href="">{{result}}</a></li>
+            {% endfor %}
+            {% for result in govern %}
+                <li><a href="">{{result}}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p>Nenhum resultado encontrado.</p>
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
