@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block links %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static "register/register.css" %}">
+
+{% endblock  %}
+
+{% block title %}Logout{% endblock %}
+
+{% block content %}
+    <div class="logout-box">
+        <p>Logout realizado</p>
+        <a href="/login/">Fazer login</a>
+    </div>
+{% endblock %}

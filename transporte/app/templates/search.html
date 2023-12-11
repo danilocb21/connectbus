@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block links %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'app/search.css' %}">
+{% endblock %}
+
+{% block title %} {{text}} - Buscar | Monitora JP{% endblock %}
+
+{% block content %}
+
+    {% if text %}
+        <div class="resultados-busca">
+            <h1> Você buscou por: <span style="color: red;">{{text}}</span></h1>
+            {% if company.count > 0 or govern.count > 0%}
+            <ul>
+                <h2>Resultados: </h2>
+                {% for result in company %}
+                    <li><a href="">{{result}}</a></li>
+                {% endfor %}
+                {% for result in govern %}
+                    <li><a href="">{{result}}</a></li>
+                {% endfor %}
+                <span>Cerca de <span style="color: red;">{{resultados}}</span> resultado(s) encontrado(s).</span>
+            </ul>
+            {% else %}
+                <p>Nenhum resultado encontrado.</p>
+            {% endif %}
+        </div>
+    {% endif %}
+
+{% endblock %}
