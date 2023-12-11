@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.views import LoginView
 from django.contrib.auth import login, logout, authenticate
-from .forms import RegisterForm
+from .forms import RegisterForm, CustomAuthenticationForm
 
 # Create your views here.
 def register(request):
@@ -19,3 +20,6 @@ def register(request):
         form = RegisterForm()
 
     return render(request, "register.html", {"form":form})
+
+class CustomLoginView(LoginView):
+    authentication_form = CustomAuthenticationForm
