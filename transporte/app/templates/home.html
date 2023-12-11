@@ -1,6 +1,32 @@
 {% extends "base.html" %}
 
+{% block links %}
+{% load static %}
+<link rel="stylesheet" href="{% static "app/home.css" %}">
+{% endblock %}
+
 {% block content %}
-<div>
-</div>
+<section class="slider_section long_section">
+    <div class="row">
+        <div class="col-md-5">
+          <div class="detail-box">
+            <h1>
+              Monitora JP <br>
+              Transporte Público
+            </h1>
+            <p>
+              Você está insatisfeito com o transporte público da sua cidade? Você acha que o serviço é caro, ineficiente, inseguro ou poluente? Você quer fazer a sua voz ser ouvida pelas autoridades responsáveis?
+
+              Então você veio ao lugar certo. Este é o site de reclamações sobre o transporte público, uma plataforma online que permite que você expresse a sua opinião sobre os problemas que enfrenta no seu dia a dia como usuário de ônibus, metrô, trem ou outro meio de transporte coletivo.                  </p>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="img-box">
+            {% load static %}
+            <img src="{% static "app/images/onibus.jpg" %}" alt="">
+          </div>
+        </div>
+    </div>
+  </div>
+  </section>
 {% endblock %}  
