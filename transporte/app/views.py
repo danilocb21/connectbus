@@ -14,7 +14,8 @@ def search(request):
             return HttpResponseRedirect("/")
         company = Company.objects.filter(nome__icontains=search)
         govern = GovernAgency.objects.filter(nome__icontains=search)
-        return render(request, "search.html", {"text": search, "company": company, "govern": govern})
+        resultados = company.count() + govern.count()
+        return render(request, "search.html", {"text": search, "company": company, "govern": govern, "resultados": resultados})
     else:
         return HttpResponseRedirect("/")
     

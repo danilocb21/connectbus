@@ -1,0 +1,18 @@
+.resultados-busca {
+    margin-top: 20px;
+    background-color: rgba(107, 107, 107, 0.8); /* Preto com 50% de opacidade */
+    color: white; /* Texto branco para contraste */
+    padding: 20px; /* Espaçamento interno para o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática baseada no conteúdo */
+    overflow: auto; /* Barra de rolagem se o conteúdo exceder a altura */
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    color: lightblue;
+}
