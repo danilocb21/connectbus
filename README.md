@@ -1,5 +1,5 @@
 # Connect Bus
-Connect Bus - Serviço de Ouvidoria do Transporte Público da sua cidade
+Connect Bus - Serviço de Ouvidoria do Transporte Público da sua cidade.
 
 ## Projeto
 A primeira parte do projeto consiste na criação de um sistema de ouvidoria em que os usuários possam enviar reclamações e/ou sugestões de melhorias para a prefeitura em relação ao transporte público local.  
