@@ -57,7 +57,7 @@ Além disso, baixem a extensão Django. Ela pode bagunçar o autocomplete do VSc
  django-html | html 
 
 ## Materiais úteis
-https://docs.djangoproject.com/en/4.2/  
+https://docs.djangoproject.com/en/5.0/  
 https://getbootstrap.com/docs/5.3/getting-started/introduction/  
 https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8  
 https://www.youtube.com/watch?v=sm1mokevMWk
