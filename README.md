@@ -6,9 +6,6 @@ A primeira parte do projeto consiste na criação de um sistema de ouvidoria em 
 Para isto, utilizaremos **HTML/CSS e JavaScript** para desenvolver o Front-End e o FrameWork **Django** com o SGBD **PostgreSQL** para o Back-End.  
 (Continuação do projeto feito anteriormente)
 
-## Desenvolvido por:
-- **Danilo**
-
 # Tutorial - Instalação
 ## Python
 Para rodar o programa, é necessário a instalação do **Python** e algumas dependências.  
@@ -61,7 +58,7 @@ Além disso, baixem a extensão Django. Ela pode bagunçar o autocomplete do VSc
 
 ## Materiais úteis
 https://docs.djangoproject.com/en/4.2/  
-https://getbootstrap.com/docs/4.0/components/buttons/  
+https://getbootstrap.com/docs/4.0/components/buttons/](https://getbootstrap.com/docs/5.3/getting-started/introduction/  
 https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8  
 https://www.youtube.com/watch?v=sm1mokevMWk
 
@@ -100,4 +97,4 @@ Commands needed to run in git until then:
 - Pull Request => Asks the project owner to change the product;
 
 ## Copyright
-&copy; 2024 Danilo. All rights reserved.
+&copy; 2024 Danilo C Beuttenmuller. All rights reserved.
