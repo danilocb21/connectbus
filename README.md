@@ -1,16 +1,13 @@
-# ifpbprojetoint
-Projeto Integrador I - Transporte Público e Segurança de dados
+# Connect Bus
+Connect Bus - Serviço de Ouvidoria do Transporte Público da sua cidade
 
 ## Projeto
 A primeira parte do projeto consiste na criação de um sistema de ouvidoria em que os usuários possam enviar reclamações e/ou sugestões de melhorias para a prefeitura em relação ao transporte público local.  
 Para isto, utilizaremos **HTML/CSS e JavaScript** para desenvolver o Front-End e o FrameWork **Django** com o SGBD **PostgreSQL** para o Back-End.  
-Enquanto que a segunda parte consiste em desenvolver um sistema seguro para o armazenamento dos dados no website Monitora-JP.
+(Continuação do projeto feito anterior)
 
 ## Desenvolvido por:
-- **Danilo**: *Requisitos, Modelo de dados, Back-End*;
-- **Erick Hallysson**: *Requisitos, Modelo de dados, Front-end*;
-- **Francisco Haikal**: *Requisitos, Modelo de dados, Front-end*;
-- **Matheus Faelson**: *Requisitos, Modelo de dados, Back-End*;
+- **Danilo**
 
 # Tutorial - Instalação
 ## Python
@@ -107,4 +104,4 @@ Commands needed to run in git until then:
 - Pull Request => Asks the project owner to change the product;
 
 ## Copyright
-&copy; 2023 Burgueses-IFPB. All rights reserved.
+&copy; 2024 Danilo. All rights reserved.
