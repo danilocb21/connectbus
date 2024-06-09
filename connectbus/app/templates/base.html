@@ -15,6 +15,7 @@
 
     {% load static %}
     <link rel="stylesheet" href="{% static "app/style.css" %}">
+    <link rel="shortcut icon" href="{% static "app/images/bus.ico" %}" type="image/x-icon">
     {% block links %} {% endblock %}
     <title>{% block title %}Connect Bus{% endblock %}</title>
 </head>
@@ -28,9 +29,7 @@
                 <div class="line3"></div>
               </div>
             <ul class="nav-list">
-                <li><a href="/">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                {% block homenav %}{% endblock homenav %}
                 {% if user.is_authenticated %}
                 <li><a href="/logout/" class="btn btn-outline-primary" role="button">Logout</a></li>
                 <li><a href="/perfil/{{user.username}}" class="btn btn-outline-primary" role="button">Perfil</a></li>
@@ -38,18 +37,17 @@
                 <li><a href="/login/" class="btn btn-outline-primary" role="button">Entrar</a></li>
                 <li><a href="/register/" class="btn btn-primary" role="button">Cadastrar</a></li>
                 {% endif %} 
-                <li><form class="search form-inline my-2 my-lg-0" method=POST action="{% url "search" %}">
-                    {% csrf_token %}
-                    <input class="search form-control mr-sm-2" type="search" placeholder="Pesquise aqui" aria-label="Search" name="search_text">
+                <li><form class="d-flex search" role="search" method=GET action="{% url "search" %}">
+                    <input class="form-control me-2" type="search" placeholder="Pesquise aqui" aria-label="Search" name="search_query">
                     <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg></button>
                 </form></li>
             </ul>
         </nav>
     </header>
     <main> 
-        {% comment %} <div id="background">
+        <div id="background">
             <div class="img-background"></div>
-        </div> {% endcomment %}
+        </div>
         <div id="content", name="content", class="main">
             <div class="row justify-content-center">
                 <div class="col-8">
@@ -77,11 +75,5 @@
 
     {% comment %} Icons {% endcomment %}
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-
-    {% comment %} Mobile Navbar script {% endcomment %}
-    <script src="{% static "app/mobile-navbar.js" %}"></script>
-
-    {% comment %} Login/Register page script {% endcomment %}
-    <script src="{% static "app/login.js" %}"></script>
 </body>
 </html>

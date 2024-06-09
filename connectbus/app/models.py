@@ -20,18 +20,12 @@ class Client(models.Model):
 class GovernmentAgency(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     phone = models.CharField(max_length=11)
-    name = models.CharField(max_length=200)
+    # name = models.CharField(max_length=200)
     # email = models.EmailField(max_length=100, unique=True)
     # password = models.CharField(max_length=128)
 
     def __str__(self):
         return self.user.first_name
-
-class Service(models.Model):
-    description = models.CharField(max_length=200)
-    
-    def __str__(self):
-        return str(self.id)
 
 class Company(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -40,7 +34,6 @@ class Company(models.Model):
     street = models.CharField(max_length=100)
     number = models.CharField(max_length=10)
     # name = models.CharField(max_length=200)
-    # service = models.ForeignKey(Service, on_delete=models.CASCADE, null=True)
     # email = models.EmailField(max_length=100, unique=True)
     # password = models.CharField(max_length=128)
 

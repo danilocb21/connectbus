@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
-{% block links %}
 {% load static %}
+{% block links %}
 <link rel="stylesheet" href="{% static "app/home.css" %}">
 {% endblock %}
+
+{% block homenav %}
+  <li><a href="/">Início</a></li>
+  <li><a href="#">Sobre</a></li>
+  <li><a href="#">Contato</a></li>
+{% endblock homenav %}
 
 {% block content %}
 <section class="about_section layout_padding">
