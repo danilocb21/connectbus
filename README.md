@@ -4,7 +4,7 @@ Connect Bus - Serviço de Ouvidoria do Transporte Público da sua cidade.
 ## Projeto
 A primeira parte do projeto consiste na criação de um sistema de ouvidoria em que os usuários possam enviar reclamações e/ou sugestões de melhorias para a prefeitura em relação ao transporte público local.  
 Para isto, utilizaremos **HTML/CSS e JavaScript** para desenvolver o Front-End e o FrameWork **Django** com o SGBD **PostgreSQL** para o Back-End.  
-(Continuação do projeto feito anterior)
+(Continuação do projeto feito anteriormente)
 
 ## Desenvolvido por:
 - **Danilo**
