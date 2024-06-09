@@ -1,5 +1,5 @@
 django
 django-environ
 django-crispy-forms
-crispy-bootstrap4
+crispy-bootstrap5
 psycopg2
