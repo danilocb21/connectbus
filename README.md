@@ -36,11 +36,7 @@ cd transporte
 ```
 Após ativar o ambiente virtual, instale as depedências que serão utilizadas no programa.
 ```bash
-pip install django
-pip install django-environ
-pip install django-crispy-forms
-pip install crispy-bootstrap4
-pip install psycopg2
+pip install -r requirements.txt
 ```
 Agora, o ambiente está pronto para ser desenvolvido. Para iniciar o servidor, execute:
 ```bash
