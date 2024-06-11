@@ -6,7 +6,7 @@
 {% block title %}Cadastro | Empresa - Connect Bus{% endblock %}
 
 {% block content %}
-<form action="submit" method="POST">
+<form action="/register/company" method="POST">
     {% csrf_token %}
     {{ form|crispy }}
     <input type="submit" value="Cadastre-se">
