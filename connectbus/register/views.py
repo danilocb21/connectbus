@@ -3,9 +3,8 @@ from django.http import HttpRequest
 from django.http.response import HttpResponse as HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, get_user_model
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm, RegisterClientForm, RegisterCompanyForm, CustomAuthenticationForm
 from app.models import Client, Company
@@ -53,7 +52,8 @@ def register_client(request):
                 street = form["street"]
                 number = form["number"]
                 neighborhood = form["neighborhood"]
-                user = User(
+                user = get_user_model()
+                user = user(
                     username=user_form["username"],
                     email=user_form["email"],
                     password=make_password(user_form["password1"]),
@@ -99,7 +99,8 @@ def register_company(request):
                 phone = form["phone"]
                 street = form["street"]
                 number = form["number"]
-                user = User(
+                user = get_user_model()
+                user = user(
                     username=user_form["username"],
                     email=user_form["email"],
                     password=make_password(user_form["password1"]),

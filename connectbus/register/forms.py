@@ -1,5 +1,5 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django import forms
 
 class CustomAuthenticationForm(AuthenticationForm):
@@ -41,7 +41,7 @@ class RegisterForm(UserCreationForm):
     email = forms.EmailField()
 
     class Meta:
-        model = User
+        model = get_user_model()
         fields = ["username", "email", "password1", "password2"]
 
 class RegisterClientForm(forms.ModelForm):
@@ -81,7 +81,7 @@ class RegisterClientForm(forms.ModelForm):
     )
 
     class Meta:
-        model = User
+        model = get_user_model()
         fields = ["first_name", "last_name", "birth_date", "cpf", "primary_phone", "optional_phone", "street", "number", "neighborhood"]
 
 class RegisterCompanyForm(forms.ModelForm):
@@ -106,5 +106,5 @@ class RegisterCompanyForm(forms.ModelForm):
     )
 
     class Meta:
-        model = User
+        model = get_user_model()
         fields = ["name", "cnpj", "phone", "street", "number"]
