@@ -1,8 +1,19 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import AbstractUser
+from django.utils.translation import gettext_lazy as _
+
+class User(AbstractUser):
+    first_name = models.CharField(max_length=150)
+    email = models.EmailField(
+        unique=True,
+        error_messages={
+            "unique": _("A user with that email already exists."),
+        },
+    )
 
 class Client(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
     cpf_id = models.CharField(max_length=11, unique=True)
     primary_phone = models.CharField(max_length=11)
     optional_phone = models.CharField(max_length=11, blank=True)
@@ -18,7 +29,7 @@ class Client(models.Model):
         return self.user.first_name
 
 class GovernmentAgency(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
     phone = models.CharField(max_length=11)
     # name = models.CharField(max_length=200)
     # email = models.EmailField(max_length=100, unique=True)
@@ -28,7 +39,7 @@ class GovernmentAgency(models.Model):
         return self.user.first_name
 
 class Company(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
     cnpj_id = models.CharField(max_length=14, unique=True)
     phone = models.CharField(max_length=11)
     street = models.CharField(max_length=100)
