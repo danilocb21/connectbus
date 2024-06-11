@@ -31,8 +31,13 @@
             <ul class="nav-list">
                 {% block homenav %}{% endblock homenav %}
                 {% if user.is_authenticated %}
-                <li><a href="/logout/" class="btn btn-outline-primary" role="button">Logout</a></li>
-                <li><a href="/perfil/{{user.username}}" class="btn btn-outline-primary" role="button">Perfil</a></li>
+                <li>
+                    <form action="{% url "logout" %}" method="post">
+                        {% csrf_token %}
+                        <input class="btn btn-outline-primary" type="submit" value="Logout">
+                    </form>
+                </li>
+                <li><a href="/profile/{{user.username}}" class="btn btn-outline-primary" role="button">Perfil</a></li>
                 {% else %}
                 <li><a href="/login/" class="btn btn-outline-primary" role="button">Entrar</a></li>
                 <li><a href="/register/" class="btn btn-primary" role="button">Cadastrar</a></li>
