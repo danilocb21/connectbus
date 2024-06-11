@@ -1,3 +1,6 @@
+from typing import Any
+from django.http import HttpRequest
+from django.http.response import HttpResponse as HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login, logout, authenticate
@@ -8,7 +11,7 @@ from app.models import Client, Company
 
 # Create your views here.
 
-@login_required
+@login_required(login_url="/login/")
 def user_logout(request):
     logout(request)
     return render(request, "registration/logout.html")
@@ -124,7 +127,13 @@ def register_company(request):
         return redirect("/")
     
     return redirect("/register")
-
-
 class CustomLoginView(LoginView):
     authentication_form = CustomAuthenticationForm
+    
+    def dispatch(self, request: HttpRequest, *args: Any, **kwargs: Any) -> HttpResponse:
+        if request.user.is_authenticated:
+            return redirect("/")
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_success_url(self) -> str:
+        return "/"
