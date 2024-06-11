@@ -3,7 +3,8 @@ from django.http import HttpRequest
 from django.http.response import HttpResponse as HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, logout
+from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm, RegisterClientForm, RegisterCompanyForm, CustomAuthenticationForm
@@ -55,7 +56,7 @@ def register_client(request):
                 user = User(
                     username=user_form["username"],
                     email=user_form["email"],
-                    password=user_form["password1"],
+                    password=make_password(user_form["password1"]),
                     first_name=first_name,
                     last_name=last_name
                 )
@@ -101,7 +102,7 @@ def register_company(request):
                 user = User(
                     username=user_form["username"],
                     email=user_form["email"],
-                    password=user_form["password1"],
+                    password=make_password(user_form["password1"]),
                     first_name=name,
                 )
                 user.save()
